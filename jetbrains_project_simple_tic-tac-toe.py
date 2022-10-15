@@ -50,7 +50,7 @@ def game_end():
         col_2 = [row[1] for row in grid]
         col_3 = [row[2] for row in grid]
         diag_1 = [grid[i][i] for i in range(3)]
-        diag_2 = [grid[i][j] for i in range(3) for j in range(3)[::-1] if i + j == 2]
+        diag_2 = [grid[i][2 - i] for i in range(3)]
 
         win_list = [row_1, row_2, row_3, col_1, col_2, col_3, diag_1, diag_2]
 
